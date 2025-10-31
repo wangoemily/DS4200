@@ -1,0 +1,466 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1.6;
+    color: #5a4a6f;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 50%, #c2e9fb 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* CUSTOMIZATION 1: Kawaii Blocky Minecraft-Inspired Typography */
+h1 {
+    font-family: 'Quicksand', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9b7bb5;
+    margin: 1.5rem 0;
+    text-shadow: 3px 3px 0px #e8d5f2;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-family: 'Quicksand', cursive;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #b794c9;
+    margin: 2rem 0 1rem 0;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+strong {
+    color: #9b7bb5;
+    font-weight: 700;
+}
+
+/* CUSTOMIZATION 2: Soft Pastel Kawaii Color Palette */
+:root {
+    --primary-pink: #fbc2eb;
+    --primary-purple: #b794c9;
+    --light-purple: #e8d5f2;
+    --pastel-blue: #a6c1ee;
+    --soft-lavender: #c8b8db;
+    --white: #ffffff;
+    --text-purple: #5a4a6f;
+}
+
+/* Sparkles Animation */
+.sparkles {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    animation: twinkle 3s infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Navigation */
+nav {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(155, 123, 181, 0.3);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--primary-purple);
+    position: relative;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-purple);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-purple);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--light-purple);
+    color: var(--primary-purple);
+    transform: translateY(-2px);
+}
+
+/* CUSTOMIZATION 3: Minecraft-Style Pixelated Borders & Blocks */
+.pixel-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-purple);
+    opacity: 0.6;
+}
+
+.pixel-corner.tl { top: -3px; left: -3px; }
+.pixel-corner.tr { top: -3px; right: -3px; }
+.pixel-corner.bl { bottom: -3px; left: -3px; }
+.pixel-corner.br { bottom: -3px; right: -3px; }
+
+/* Main Content */
+.home-main {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+}
+
+.welcome-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(232, 213, 242, 0.95));
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(155, 123, 181, 0.4),
+                inset 0 0 30px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    position: relative;
+    border: 4px solid var(--primary-purple);
+}
+
+/* Profile Frame - Minecraft Block Style */
+.profile-frame {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+    position: relative;
+    border: 5px solid var(--primary-purple);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(155, 123, 181, 0.5),
+                inset 0 0 20px rgba(251, 194, 235, 0.3);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-pink), var(--pastel-blue));
+}
+
+.pixel-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info Box */
+.info-box {
+    background: linear-gradient(135deg, var(--light-purple), rgba(255, 255, 255, 0.8));
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+    border: 3px solid var(--primary-purple);
+    box-shadow: 0 5px 15px rgba(155, 123, 181, 0.3);
+}
+
+.major, .school {
+    font-size: 1.2rem;
+    color: var(--text-purple);
+    margin: 0.5rem 0;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+/* Cute Divider */
+.cute-divider {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    color: var(--primary-purple);
+    opacity: 0.7;
+}
+
+/* Contact Buttons */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.contact-btn {
+    background: linear-gradient(135deg, var(--primary-pink), var(--pastel-blue));
+    color: white;
+    padding: 1.2rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(155, 123, 181, 0.4);
+    border: 3px solid var(--primary-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    text-transform: lowercase;
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(155, 123, 181, 0.6);
+    background: linear-gradient(135deg, var(--pastel-blue), var(--primary-pink));
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+}
+
+/* Decorations */
+.decorations {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.deco {
+    animation: float 3s ease-in-out infinite;
+}
+
+.deco:nth-child(2) { animation-delay: 0.5s; }
+.deco:nth-child(3) { animation-delay: 1s; }
+.deco:nth-child(4) { animation-delay: 1.5s; }
+.deco:nth-child(5) { animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Experience Page */
+.experience-main {
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(232, 213, 242, 0.95));
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(155, 123, 181, 0.4),
+                inset 0 0 30px rgba(255, 255, 255, 0.5);
+    position: relative;
+    border: 4px solid var(--primary-purple);
+}
+
+.experience-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Summary Box */
+.summary-box {
+    background: linear-gradient(135deg, var(--light-purple), rgba(255, 255, 255, 0.8));
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    border: 3px solid var(--primary-purple);
+    box-shadow: 0 5px 15px rgba(155, 123, 181, 0.3);
+}
+
+.summary-box p {
+    margin-bottom: 1rem;
+    color: var(--text-purple);
+    font-weight: 500;
+}
+
+.summary-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Resume Section */
+.resume-section {
+    text-align: center;
+}
+
+.resume-embed {
+    margin: 2rem 0;
+    border: 4px solid var(--primary-purple);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(155, 123, 181, 0.4);
+    background: white;
+}
+
+.resume-embed iframe {
+    border: none;
+    display: block;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-pink), var(--pastel-blue));
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(155, 123, 181, 0.4);
+    border: 3px solid var(--primary-purple);
+    margin-top: 1rem;
+    text-transform: lowercase;
+}
+
+.download-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(155, 123, 181, 0.6);
+    background: linear-gradient(135deg, var(--pastel-blue), var(--primary-pink));
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(232, 213, 242, 0.9));
+    color: var(--text-purple);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--primary-purple);
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.footer-deco {
+    margin-top: 0.5rem;
+    color: var(--primary-purple);
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .welcome-container,
+    .experience-container {
+        padding: 2rem;
+    }
+
+    .profile-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .resume-embed iframe {
+        height: 600px;
+    }
+
+    .decorations {
+        font-size: 1.5rem;
+        gap: 1rem;
+    }
+}
+```
+
+---
+
+## **Updated customizations.txt**
+```
+Emily Wang - Personal Website
+URL: [Your GitHub Pages URL]
+
+STYLING CUSTOMIZATIONS:
+
+1. Kawaii Blocky Minecraft-Inspired Typography
+   - Used 'Quicksand' font family for soft, rounded kawaii aesthetic
+   - Applied text-shadow effect (3px 3px) for blocky Minecraft-style depth
+   - All text in lowercase for cute, casual vibe
+   - Generous letter-spacing (1-2px) for legibility and style
+   - Font sizes: h1 at 2.5rem, h2 at 1.6rem, body at 1.05rem
+
+2. Soft Pastel Kawaii Color Palette
+   - Dreamy gradient background: pink (#fbc2eb) → blue (#a6c1ee) → light blue (#c2e9fb)
+   - Primary colors: soft purple (#b794c9), pastel pink (#fbc2eb), lavender (#e8d5f2)
+   - Gradient overlays on cards and buttons for depth
+   - Purple borders (4px solid) for Minecraft block aesthetic
+   - Semi-transparent white backgrounds with inset glow for glass effect
+
+3. Minecraft-Style Pixelated Borders & Kawaii Layout
+   - Pixelated corner decorations (20x20px blocks) on containers
+   - Chunky borders (3-4px solid) for Minecraft block feel
+   - Rounded corners (border-radius: 20-30px) for soft kawaii style
+   - Box-shadow effects: outer glow + inset glow for depth
+   - Floating animation on decorative emojis (3s ease-in-out loop)
+   - Hover effects: translateY(-5px) lift with enhanced shadows
+   - Generous padding (3rem) and spacing for clean layout
+   - Gradient backgrounds on all major elements
+   - Kawaii decorative elements: sparkles, dividers, floating emojis
+```
+
+---
+
+## **Files You Need:**
+```
+Part1-Website/
+├── index.html
+├── experience.html
+├── styles.css
+├── E93EB27F-DF99-4601-9F74-3191B73B8A83_1_105_c.jpeg
+└── Emily Wang's Resume.pdf
